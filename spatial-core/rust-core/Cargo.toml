@@ -1,0 +1,9 @@
+[package]
+name = "omnispatial-spatial-core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "omnispatial_spatial_core"
+path = "src/lib.rs"
+

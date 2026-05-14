@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run tests
+        run: python -m pytest tests -q
+      - name: Compile Python
+        run: python -m compileall services src tests
+      - name: Install frontend deps
+        run: npm --prefix frontend-dashboard install
+      - name: Build frontend
+        run: npm --prefix frontend-dashboard run build
+

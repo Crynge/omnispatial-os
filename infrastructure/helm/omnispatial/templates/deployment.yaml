@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omnispatial-os
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: omnispatial-os
+  template:
+    metadata:
+      labels:
+        app: omnispatial-os
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/crynge/omnispatial-os:latest
+          ports:
+            - containerPort: 8036
+

@@ -1,0 +1,8 @@
+image:
+  repository: ghcr.io/crynge/omnispatial-os
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 8036
+
