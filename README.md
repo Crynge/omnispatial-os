@@ -2,7 +2,6 @@
 
 Hyperlocal multi-agent operating system for **physical marketing intelligence**, **spatial ROI forecasting**, and **privacy-aware edge decisioning**.
 
-![OmniSpatial dashboard](docs/screenshots/omnispatial-command-center.png)
 
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![Frontend](https://img.shields.io/badge/frontend-react%20%2B%20vite-61dafb.svg)](https://react.dev/)
